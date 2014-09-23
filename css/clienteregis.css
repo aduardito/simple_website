@@ -1,0 +1,369 @@
+@media only screen and (min-width: 480px) {
+body{
+	margin: 0;
+	padding: 0;
+	background: #EAEAEA;
+}
+.menu_mobile{
+	display:none;
+}
+.container_principal{
+	background-color: white;
+	width: 960px;
+	min-height: 600px;
+	margin: 0px auto 40px auto;
+
+	position:relative;
+	border: solid 1px #DDD;
+	box-shadow: 0 0 10px #AAA;
+	padding-bottom: 80px;
+}
+
+.container_menu{
+	margin:0 10px;	
+}
+
+.container_menu ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.container_menu ul li{
+	padding-left: 20px;
+	padding-right: 10px;
+	margin-left:10px;
+	height:35px;
+	float:right;
+	border-bottom-left-radius:20px ;
+	border-bottom-right-radius: 5px;
+	background-image: -webkit-linear-gradient(270deg, grey, black);
+	background-image: -moz-linear-gradient(270deg, grey, black);
+	text-align:center;
+	padding-top:10px;
+	-moz-box-shadow: 10px 10px 5px #888;
+	-webkit-box-shadow: 10px 10px 5px #888;
+	box-shadow: 5px 5px 6px #888;
+}
+
+a:link,a:visited,a:hover,a:active{
+	
+	text-decoration:none;
+	color:#C0C0C0;
+	/*text-shadow: -1px -1px 0 ;*/
+	font-size:20px;
+	
+}
+
+div.situaboton{
+	padding:50px;
+	padding-bottom:0px;
+	text-align: right;
+}
+.botonGenera{
+	margin-top:20px;
+	clear:both;
+	display:inline;
+	padding: 5px;
+	border-radius: 4px;
+	border:solid 1px #757575;
+}
+.botonGenera a{
+	color:#171717;
+}
+.botonGenera:hover{
+	border:solid 1px #757575;
+	background-color:#000000;
+}
+.botonGenera a:hover{
+	color:#FFFAFA;
+}
+.bienvenido{
+	padding-top:100px;
+	clear:both;
+	margin:10px;
+	min-height: 300px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.footer{
+	margin: 5px;
+	margin-bottom: 0px;
+	height: 50px;
+	width: 948px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-top:solid 1px #621A06;
+	border-right: solid 1px #621A06;
+	background-image: -webkit-linear-gradient(270deg, grey, black);
+	background-image: -moz-linear-gradient(270deg, grey, black);
+
+	position: absolute;
+	bottom:0px;
+
+}
+
+.footer p{
+	text-align: center;
+	color:white;
+	font-size: 12px;
+	
+	
+}
+
+.contenedor_tabla_clientes{
+	margin: 100px 20px;
+	min-height: 300px;
+}
+
+
+div.consulta1{
+	min-height:50px;
+	width: 70%;
+	border: 1px black solid;
+	box-shadow: 0 0 10px #AAA;
+	border-radius: 5px;
+	padding: 10px;
+	margin:0 auto;
+}
+
+
+.fRegistro{
+	width:300px;
+	margin-left:10px;
+	padding:10px;
+	border-radius: 5px;
+	border:solid 2px #808080;
+	margin-top:80px;
+	min-height: 200px;
+	position:absolute;
+	left:50%;
+	margin-left:-150px;	
+}
+
+/*CLIENTE MODIFICA DATOS*/
+.formulario_registro {
+	display:inline-block;
+	float:left;
+	min-height: 125px;
+
+}
+
+.formulario_registro input{
+	margin-top: 2px;
+	margin-bottom: 4px;
+	background-color: #F2F2F2;
+	width: 250px;
+	border: 1px solid #2F4F4F;
+}
+
+.formulario_registro .boton_registro{
+	width: 75px;
+	margin-top: 12px;
+}
+
+/* CLIENTE VISUALIZA COMUNICACIONES*/
+.comunicacion_individual{
+	width: 70%;
+	border-radius: 5%;
+	margin: 0 auto;
+	clear: both;
+	padding: 10px;
+}
+
+.client_writing{
+	width: 100%;
+}
+
+.admin_writing{
+	width: 100%;
+	text-align: right;
+}
+
+.conversation_name{
+	font-weight: bold;
+	border-bottom: 1px dotted black;
+}
+
+.comunicacion_individual h3{
+	background:-moz-linear-gradient(#f9f9f9 0%,#DADADA 100%);
+	background:-ms-linear-gradient(#f9f9f9 0%,#DADADA 100%); 
+	background:-o-linear-gradient(#f9f9f9 0%,#DADADA 100%); 
+	background:-webkit-linear-gradient(#f9f9f9 0%,#DADADA 100%); 
+	background:linear-gradient(#f9f9f9 0%,#DADADA 100%);
+	border:solid 1px #DEDEDE; 
+	border-radius:5px;
+	text-align:center;
+	padding:5px; 
+	color:#333; 
+	width:98%; 
+	margin: 0 auto;
+
+}
+
+.comunicacion_individual h3 a{
+	font-weight: normal;
+}
+
+.comunicacion_individual h3:hover{
+	background:-moz-linear-gradient(#fff 0%,#DEDEDE 100%);
+}
+
+.comunicacion_individual h3 a:hover{
+	color:#006400; 
+}
+
+.comunicacion_individual form{
+    vertical-align: middle;
+    position:relative;
+}
+
+.comunicacion_individual a{
+    color:black;
+}
+
+textarea.writing_new_question{
+	width:90%;
+	max-width: 90%;
+	height: 60px;
+	max-height: 60px;
+	margin: 5px auto;
+	background-color: #EAEAEA;
+	border:1px solid #a3a3a3;
+	border-radius: 5px;
+}
+
+.comunicacion_individual form input{
+    position:absolute;
+    right: 0px;
+    top:25px;
+}
+
+.ocultando{
+	display:none;
+}
+
+
+/*crea comunicacion _ cuando se pulsa el boton de crea comunicacion*/
+
+.creaconversacion{
+	text-align: center;
+	width: 40%;
+	min-height: 100px;
+	margin: 50px auto;
+	border: 1px solid blue;
+	background-color: #EAEAEA;
+	border-radius: 30px;
+}
+
+.creaconversacion label{
+	display: block;
+	margin-top: 20px;
+}
+.creaconversacion input, .creaconversacion select, .creaconversacion textarea {
+	border: 1px solid blue;
+	background-color: #EAEAEA;
+}
+.creaconversacion textarea{
+	width: 60%;
+	height: 50px;
+}
+
+
+/*visualiza clientes*/
+.contenedor_tabla_clientes table tbody tr td p.titulo_table_clientes_movil{
+	display: none;
+}
+.contenedor_tabla_clientes table tbody tr td p.data_table_clientes_movil{
+	margin: 0;
+	padding: 0 5px;
+	display: inline;
+
+}
+table{
+	border-collapse: collapse;
+	margin: 0 auto;	
+}
+.table_titles th{
+	padding: 5px;
+	font-size: 13pt;
+	background-color: black;
+	color:white;
+	text-align: left;
+}
+.tabla_clientes:hover{
+	background-color: #9e1316;
+}
+
+.tabla_clientes td{
+	font-size: 12pt;
+	margin: 0;
+	padding: 0;
+}
+.tr_par{
+	background-color: #989898;
+	margin: 0;
+	padding: 3px 0;
+}
+
+.tr_impar{
+	background-color: #cbcaca;
+	margin: 0;
+	padding: 3px 0;
+}
+
+/*clientes con comunicaciones*/
+.c_c_com{
+	clear:both;
+	padding: 30px;
+}
+
+.c_c_com form{
+	display: block;
+	margin:0 auto;
+}
+
+.boton_cliente{
+	margin:5px auto;
+	width: 200px;
+	box-shadow: 1px 1px black;
+	height: 40px;
+	border-radius: 6px;
+	font-size: 13px;
+	font-weight: bold;
+	
+}
+
+.boton_par_c_c_com{
+	background-color:#a9a37a;
+}
+
+.boton_impar_c_c_com{
+	background-color:#ccc16f;
+}
+
+/*viendo comunicaiones clientes especifico*/
+.enlace_back{
+	clear:both;
+	text-align: right;
+	padding: 20px 20px 0 0;
+	margin-bottom: 20px;
+	border-bottom: 1px solid blue;
+}
+
+.enlace_back a, .enlace_back a:link, .enlace_back a:visited, .enlace_back a:active{
+	color: blue;
+	font-size: 11px;
+}
+
+.enlace_back a:hover{
+	color:red;
+}
+
+.texto_introducido{
+	text-align: center;
+}
+
+
+}

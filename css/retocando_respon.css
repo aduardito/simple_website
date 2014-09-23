@@ -1,0 +1,398 @@
+@media only screen and (max-width: 480px) {
+	body{
+		background-color: #E6E6FA;
+		width: 100%;
+		font-size: 13pt;
+		margin:0;
+		padding: 0;
+		position:relative;
+		overflow-x:hidden; 
+
+	}
+	tr, td, h1,h2,h3,h4,h5,h6, p,div, ul, table, textarea,select, dl, dt, dd{
+		margin:0;
+		padding: 0;
+		z-index: 1;
+		position: relative;
+	}
+
+	#menu_page, #menu_page *{
+		display:none;
+	}
+	#menu_mobile{
+		position: relative;
+		top: 0;
+		left: 0;
+		overflow: visible;
+		z-index: 10;
+	}
+
+	.bar_display{
+		width: 100%;
+		height: 44px;
+		position: relative;
+		top: 0%;
+		left: 0%;
+		background-color: #008000;
+		color: white;
+		overflow: visible;
+	}
+
+	.bar_display .bar_display_home{
+		position: absolute;
+		bottom:0;
+		left: 6px;
+		margin-bottom: -5px;
+		width: 42px;
+		height: 38px;
+		z-index: 100;
+	}
+
+	.bar_display .bar_display_text{
+		text-align: center;
+		font-family: Calibri, "Comic sans";
+		font-size: 18pt;
+		height: 100%;
+		width: 100%;
+		position: relative;
+
+	}
+
+	.bar_display .bar_display_text p{
+		display: block;
+		font-family: Calibri, "Comic sans";
+		font-size: 18pt;
+		text-align: center;
+		position: absolute;
+		width: 100%;
+		bottom: 0%;
+		margin-bottom: 2px;
+		text-shadow: 2px 2px 0 #621A06;
+	}
+
+	.bar_display .bar_display_menu{
+		position: absolute;
+		bottom:0;
+		right: 6px;
+		margin-bottom: -5px;
+		width: 42px;
+		height: 38px;
+		z-index: 10;
+	}
+
+	.container_principal{
+		background-color: #F0FFF0;
+		width: 86%;
+		margin: 0 auto;
+		padding: 3%;
+		box-shadow: 0 0 10px #AAA;
+		text-align: center;
+		position:relative;
+		z-index: 2;
+	}
+
+	.container_principal .container_img{
+		position:relative;
+		width: 110%;
+		top: 0;
+		left: 50%;
+		margin-left: -55%;
+	}
+
+	.container_img img{
+		width: 100%;
+	}
+	.container_menu{
+		display: block;
+		width: 100%;
+		min-height: 40px;
+		z-index: 5;
+	}
+
+	ul#menu{
+		padding-top: 5%;
+		list-style: none;
+		display: block;
+		width: 100%;
+		height: 450px;
+		background: #E6E6FA;
+		position:relative;
+		z-index: 1;
+	}
+
+	#menu li{
+		display:block;
+		position: relative;
+		left:50%;
+		margin-left: -20%;
+		width: 40%;
+		height: 40px;
+		text-align: center;
+		background-color: #B8E65C;
+		border:1px solid white;
+		border-radius: 10px;
+		margin-bottom: 40px;
+	}
+
+	#menu li:first-child{
+		display:none; 
+	}
+
+	#menu li a:visited, #menu li a:link{
+		font-weight: bold;
+		position:relative;
+		top:10px;
+		text-decoration: none;
+		color: #621A06;
+		display: block;
+		text-shadow: -1px -1px 0 white;
+	}
+
+
+	.cont_inf{
+		width: 100%;
+		clear: both;
+	}
+	.cont_inf div{
+		width: 100%;
+		margin:30px auto 10px auto;
+		text-align: left;
+	}
+	.cont_inf div h3{
+		margin-bottom: 10px;
+	}
+	#ppp{
+		margin: 0;
+	}
+	.cont_inf_lef{
+		border-top: 3px solid blue;
+	}
+
+	.cont_inf_cen{
+		border-top: 3px solid red;
+	}
+
+	.cont_inf_rig{
+		border-top: 3px solid yellow;
+
+	}
+	.cont_inf_lef h3{
+		border-bottom: 1px solid blue;
+	}
+
+	.cont_inf_cen h3{
+		border-bottom: 1px solid red;
+	}
+
+	.cont_inf_rig h3{
+		border-bottom: 1px solid yellow;
+
+	}
+
+	.footer{
+		display: none;
+	}
+
+	/*contacto*/
+
+
+	.tablacentro, .tablacentro tbody, .tablacentro tbody tr, .tablacentro tbody tr td{
+		width: 100%;
+		display: block;
+	}
+
+	.tablacentro{
+		margin-top: 20px;
+	}
+
+	.tablacentro tbody tr td textarea{
+		height: 70px;
+		width: 90%;
+		margin:0 auto;
+		background-color: #F2F2F2;
+		border: 1px solid #008000;
+		margin-bottom: 20px;
+		border-radius: 5px;
+	}
+
+	.dudas{
+		color: red;
+		padding-bottom: 10%;
+	}
+
+
+/*servicios*/
+	.texto{
+		width: 100%;
+		text-align: left;
+	}
+
+	.texto dl{
+		width: 90%;
+		margin: 0 auto;
+		display: block;
+		padding: 2% 4%;
+	}
+	.texto dt{
+		font-weight: bold;
+		border: 1px solid #008000;
+		width: 96%;
+		margin-top: 10px;
+	}
+	.texto dt:first-child{
+		margin-top: 10px;
+	}
+
+	.texto dd{
+		width: 100%;
+	}
+
+	.cambia_texto{
+		display:none;
+	}
+
+
+	/*area registro y logeo*/
+
+	fieldset{
+		border: 1px solid #008000;
+		border-radius: 5px;
+		margin-bottom: 20px;
+	}
+
+	/*formulario logeo  y formulario registro*/
+	.formulario input, .formulario_registro input, .tablacentro tr td input, .tablacentro tr td select{
+		height: 20px;
+		width: 90%;
+		margin:0 auto;
+		background-color: #F2F2F2;
+		border: 1px solid #008000;
+		margin-bottom: 20px;
+		border-radius: 5px;
+	}
+
+
+	
+
+	.formulario input.boton, .formulario input.boton_registro{
+		width: 50%;
+		margin-bottom: 10px;
+	}
+
+	.link_registro a:link, .link_registro a:visited{
+		text-decoration: underline;
+		color:green;
+	}
+
+
+	#errores_login{
+		margin: 0 auto; 
+		padding: 10px;
+		clear:both; 
+		border:1px solid red; 
+		text-align:center;
+		border-radius: 30px;
+	}
+
+	#errores_login p{
+		margin: 5px 0;
+		padding: 0;
+		font-size: 16pt;
+	}
+
+	#errores_login h2{
+		margin: 10px 0;
+		color:red;
+		padding: 0;
+	}
+
+	/*registro*/
+	.divide{
+		margin:0 auto 20px;
+		width: 90%;
+
+	}
+	
+	.divComentario{
+		width: 90%;
+		margin: 0px auto 20px auto;
+		text-align: left;
+	}
+
+	.formulario_registro{
+		text-align: left;
+	}
+
+	.formulario_registro input.boton_registro, .tablacentro tr td input.boton_registro{
+		width: 50%;
+		margin:0 auto 10px auto;
+	}
+
+	.ocultando{
+		display:none;
+	}
+
+	/*experience*/
+	.container_curriculum{
+		text-align: left;
+	}
+
+	.container_curriculum h3{
+		text-align: right;
+		margin-top: 40px;
+		margin-bottom: 20px;
+		padding-right: 5px;
+	}
+
+	.container_curriculum h3.desarrollando_menu_formacion{
+		border-bottom: 1px solid #c15555;
+		border-right: 3px solid #c15555;
+		color: #7e2b2b;
+	}
+
+	.container_curriculum h3.desarrollando_menu_prog{
+		border-bottom: 1px solid #a55fa0;
+		border-right: 3px solid #a55fa0;
+		color: #a31f99;
+	}
+
+	.container_curriculum h3.desarrollando_menu_idiomas{
+		border-bottom: 1px solid #5ec74c;
+		border-right: 3px solid #5ec74c;
+		color: #279a13;
+	}
+
+	.container_curriculum h3.desarrollando_menu_cursos{
+		border-bottom: 1px solid #c7d21f;
+		border-right: 3px solid #c7d21f;
+		color: #9ea70c;
+	}
+
+	.container_curriculum h3.desarrollando_menu_exper{
+		border-bottom: 1px solid #5364e7;
+		border-right: 3px solid #5364e7;
+		color:#0032f4;
+	}
+
+	.container_curriculum h3.desarrollando_menu_informatica{
+		border-bottom: 1px solid #b47714;
+		border-right: 3px solid #b47714;
+		color:#694e23;
+	}
+
+	td, th{
+		display: block;
+
+	}
+	.container_curriculum table tbody tr td{
+		font-size: 10pt;
+		padding-bottom: 5px;
+
+	}
+	.container_curriculum table tbody tr th{
+		font-size: 14pt;
+		padding-bottom: 15px;
+		font-weight: normal;
+
+	}
+}

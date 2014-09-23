@@ -1,0 +1,573 @@
+@media only screen and (min-width: 480px) {
+body{
+	margin: 0;
+	padding: 0;
+	background: #E6E6FA;
+}
+#menu_mobile{
+	display:none;
+}
+.container_principal{
+	background-color: #F0FFF0;
+	width: 960px;
+	min-height: 600px;
+	margin: 0px auto 50px auto;
+	padding-bottom: 40px;
+
+	position:relative;
+	border: solid 1px #DDD;
+	box-shadow: 0 0 10px #AAA;
+
+	overflow:auto;
+	scrollbar-base-color:#ffeaff;
+}
+
+.container_menu{
+	margin: 5px;
+	min-height: 50px;
+	border-radius: 5px;
+	border-top:solid 1px #621A06;
+	border-right: solid 1px #621A06;
+	background-color:#008000;
+}
+
+ul#menu{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a:link,a:visited,a:hover,a:active{
+	color:white;
+	text-shadow: -1px -1px 0 #621A06;
+}
+
+#menu li{
+	float: left;
+	height: 20px;
+	padding: 15px;
+	font-size: 18px;
+	border-left: solid 1px #FFF;
+	border-right: solid 1px #621A06;
+}
+#menu li:last-child{
+	border-right: none;
+}
+
+#menu li a{
+	text-decoration: none;
+}
+
+.container_img {
+	width: 100%
+}
+
+.container_img img{
+	border-radius: 5px;
+	border:solid 1px #008000;
+	margin-left: 5px;
+	margin-right: 5px;
+	width: 948px;
+}
+
+.cont_inf{
+	margin-right:5px; 
+	margin-left:5px;
+	min-height: 250px;
+}
+
+.cont_inf .cont_inf_lef{
+	padding: 5px;
+	width: 240px;
+	height: 250px;
+	float:left;
+	border:solid #008000 1px;
+	border-radius: 5px;
+}
+
+.cont_inf .cont_inf_cen{
+	padding: 5px;
+	margin-left: 15px;
+	height: 250px;
+	width:400px;
+	float:left;
+	border:solid #008000 1px;
+	border-radius: 5px;
+}
+.cont_inf .cont_inf_rig{
+	padding: 5px;
+	margin-left: 15px;
+	height: 250px;
+	width:240px;
+	float:right;
+	border:solid #008000 1px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+.cont_inf .cont_inf_rig h3{
+	display: none;
+}
+
+
+.footer{
+	margin: 5px;
+	margin-bottom: 0px;
+	height: 50px;
+	width: 948px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-top:solid 1px #621A06;
+	border-right: solid 1px #621A06;
+	background-color:#008000;
+
+	position: absolute;
+	bottom:0px;
+}
+
+.footer p{
+	text-align: center;
+	color:white;
+	font-size: 14px;
+	
+	
+}
+
+/* pagina de servicios*/
+.container_texto{
+	margin: 10px;
+	min-height: 400px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+}
+
+.container_texto .cambia_texto{
+	position: relative;
+	text-align: center;
+	height: 200px;
+	width: 100%;
+	border-bottom-left-radius: 5px;
+	border-bottom:solid 1px #621A06 ; 
+	border-left: solid 1px #621A06;
+}
+.cambia_texto h2{
+	position:relative;
+	height:100px;
+	top:50%;
+	margin-top: -50px;
+	display:inline;
+	width:200px;
+	height: 100px;
+}
+
+.container_texto .cambia_texto{
+	clear:both;
+	float:right;
+	width:30%;
+}
+
+.texto dl{
+	text-align: left;
+	float:left;
+	width:60%;
+}
+
+.texto dl dt{
+	margin-top: 20px;
+	border-radius:5px;
+	border: solid  1px #008000;
+}
+
+input{
+	border-radius:4px;
+}
+
+/*  area clientes____________________________ 
+_____________________________________________*/
+.divide{
+	margin:5px;
+	min-height: 400px;
+	position:relative;
+}
+
+.user_login{
+	width: 300px;
+	height: 300px;
+	margin-left: 150px;
+	float:left;
+	position: relative;
+}
+
+.user_signin{
+	width: 300px;
+	height: 300px;
+	margin-right: 150px;
+	float:right;
+	position: relative;
+}
+
+.user_login fieldset{
+	width: 200px;
+	height: 150px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	border-radius:5px;
+	margin-left: -100px;
+	margin-top: -75px;
+	border:solid 1px #008000;
+}
+
+.user_signin fieldset{
+	border-radius:5px;
+	width: 200px;
+	height: 150px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left: -100px;
+	margin-top: -75px;
+	border:solid 1px #008000;
+	text-align: center;
+}
+
+.user_signin fieldset p {
+	padding-top: 25px;
+}
+
+.user_signin fieldset p a{
+	color:green;
+	font-size: 1.5em;
+	text-shadow: none;
+}
+
+.user_signin fieldset p a:hover{
+	font-size: 2em;
+}
+
+.formulario {
+	position:relative;
+	height: 125px;
+
+}
+
+.formulario input{
+	margin-top: 2px;
+	margin-bottom: 4px;
+	background-color: #F2F2F2;
+	width: 150px;
+	border: 1px solid #008000;
+}
+
+
+.formulario .boton{
+	width: 75px;
+	margin:0 auto;
+	position:absolute;
+	bottom: 4px;
+	right: 4px;
+}
+
+
+#errores_login{
+	margin: 0 auto; 
+	padding: 10px;
+	clear:both; 
+	width:40%; 
+	border:1px solid red; 
+	text-align:center;
+	border-radius: 30px;
+}
+
+#errores_login p{
+	margin: 5px 0;
+	padding: 0;
+	font-size: 16pt;
+}
+
+#errores_login h2{
+	margin: 10px 0;
+	padding: 0;
+}
+
+/* noexiste el usuario */
+div.noexiste{
+	color:red;
+	clear: both;
+	text-align: center;
+}
+
+
+
+/* Registro usuario */
+.divComentario{
+	width:220px;
+	float:left;
+	border:dotted 1px #008000;
+	min-height: 200px;
+	padding: 10px;
+	margin:20px 30px 0 60px;
+	border-radius: 5px;
+	min-height: 200px;
+}
+
+.registro_form{
+	float:left;
+	margin-right: 100px;
+}
+
+.registro_form td{
+	width: 150px;
+}
+
+.divErrores{
+	width: 200px;
+	float:left;
+	border:dotted 1px red;
+	min-height: 200px;
+	padding: 10px;
+	margin:20px 60px 0 30px;
+	border-radius: 5px;
+}
+.divErrores p{
+	width: 100%;
+	margin-top: 10px;
+}
+
+.link_registro a{
+	text-shadow:1px 1px 1px black;
+}
+
+.fRegistro{
+	width:260px;
+	margin-left:10px;
+	padding:0 10px;
+	border-radius: 5px;
+	border:solid 2px #008000;
+	margin-top:20px;
+	min-height: 200px;
+	position:absolute;
+	left:50%;
+	margin-left:-150px;	
+}
+
+.registro_completado{
+	text-align: center;
+	margin-top: 150px;
+}
+.registro_completado h1{
+	text-align: center;
+	padding-top: 150px;
+}
+
+.formulario_registro {
+	width: 300px;
+	float:left;
+	min-height: 125px;
+
+}
+.formulario_registro label{
+	display:block;
+
+}
+
+.formulario_registro input{
+	margin-top: 2px;
+	margin-bottom: 4px;
+	background-color: #F2F2F2;
+	width: 250px;
+	border: 1px solid #008000;
+}
+
+.formulario_registro .boton_registro{
+	width: 75px;
+}
+
+
+#roleando{
+	display:none;
+}
+
+/*  experiencia/blog trabajo________________________________
+____________________________________________*/
+.submenu_exper{
+	margin:0 150px;
+
+}
+
+.submenu_exper ul{
+	list-style: none;
+}
+
+
+.submenu_exper li{
+	text-align: center;
+	float: left;
+	margin-left: 50px;
+	height: 15px;
+	padding: 10px;
+	font-size: 14px;
+	border-radius: 5px;
+	border:1px solid black;
+	width:80px;
+}
+
+.container_curriculum{
+	padding:20px 40px 80px 40px ;
+	clear:both;
+}
+
+.container_curriculum table td{
+	vertical-align:top;
+	text-align: left;
+}
+.container_curriculum label{
+	display:block;
+	border-bottom: solid 2px #621A06;
+	border-top: solid 1px grey;
+	padding-bottom: 2px;
+}
+
+
+
+
+
+.container_curriculum{
+		text-align: left;
+	}
+
+	.container_curriculum h3{
+		text-align: right;
+		margin-top: 40px;
+		margin-bottom: 20px;
+		padding-right: 5px;
+	}
+
+	.container_curriculum h3.desarrollando_menu_formacion{
+		border-bottom: 1px solid #c15555;
+		border-right: 3px solid #c15555;
+		color: #7e2b2b;
+	}
+
+	.container_curriculum h3.desarrollando_menu_prog{
+		border-bottom: 1px solid #a55fa0;
+		border-right: 3px solid #a55fa0;
+		color: #a31f99;
+	}
+
+	.container_curriculum h3.desarrollando_menu_idiomas{
+		border-bottom: 1px solid #5ec74c;
+		border-right: 3px solid #5ec74c;
+		color: #279a13;
+	}
+
+	.container_curriculum h3.desarrollando_menu_cursos{
+		border-bottom: 1px solid #c7d21f;
+		border-right: 3px solid #c7d21f;
+		color: #9ea70c;
+	}
+
+	.container_curriculum h3.desarrollando_menu_exper{
+		border-bottom: 1px solid #5364e7;
+		border-right: 3px solid #5364e7;
+		color:#0032f4;
+	}
+
+	.container_curriculum h3.desarrollando_menu_informatica{
+		border-bottom: 1px solid #b47714;
+		border-right: 3px solid #b47714;
+		color:#694e23;
+	}
+
+	.container_curriculum table tbody tr td{
+		font-size: 10pt;
+		padding-bottom: 5px;
+		width: 10%;
+		border-right: 1px solid black;
+		border-top: 1px solid black;
+	}
+	.container_curriculum table tbody tr th{
+		font-size: 14pt;
+		padding-bottom: 15px;
+		font-weight: normal;
+		padding-left: 10px;
+	}
+
+	.container_curriculum table.mayor_espacio_titulos tbody tr td{
+		width: 24%;
+	}
+
+
+
+
+/*  contacto________________________________
+____________________________________________*/
+
+.divideCon{
+	min-height: 200px;	
+	text-align: center;
+}
+
+.divideCon div h3{
+	margin-top: 80px;
+}
+
+
+.instru_de{
+	width:10%;
+	float:left;
+}
+.instru_iz{
+	width:20%;
+	padding-left: 20px;
+	float:left;
+}
+.tablacentro{
+	width:50%;
+	padding:10px;
+	margin-left:20px;
+	margin-bottom:10px;
+	float:left;
+	border:solid 1px #008000;
+	border-radius: 5px;
+	text-align: left;
+}
+
+.dudas{
+	padding-top:50px;
+	text-align: center;
+	clear:both;
+}
+
+.tablacentro tr td input, .tablacentro tr td select{
+	margin-top: 2px;
+	margin-bottom: 4px;
+	background-color: #F2F2F2;
+	width: 300px;
+	border: 1px solid #008000;
+}
+
+.tablacentro tr td input.boton_registro{
+	width: 75px;
+}
+
+.tablacentro tr td textarea{
+	margin-top: 2px;
+	margin-bottom: 4px;
+	background-color: #F2F2F2;
+	width: 300px;
+	height: 70px;
+	max-width: 300px;
+	max-height: 70px;
+	border: 1px solid #008000;
+	border-radius:4px;
+}
+
+.tablacentro tr td select.page_contacto{
+	border-radius:4px;
+}
+
+
+
+}
