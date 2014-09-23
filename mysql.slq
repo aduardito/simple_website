@@ -1,0 +1,228 @@
+DROP SCHEMA IF EXISTS proyecto_final_egm;
+CREATE SCHEMA proyecto_final_egm;
+USE proyecto_final_egm;
+
+
+CREATE USER 'ushauri'@'localhost' IDENTIFIED BY 'admin';
+grant all on proyecto_final_egm.* to 'ushauri'@'localhost';
+FLUSH PRIVILEGES;
+
+
+-- phpMyAdmin SQL Dump
+-- version 3.5.2.2
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Jun 12, 2013 at 10:30 AM
+-- Server version: 5.1.66
+-- PHP Version: 5.2.17
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `u696323612_u6963236`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `roles`
+--
+
+DROP TABLE IF EXISTS `roles`;
+CREATE TABLE IF NOT EXISTS `roles` (
+  `id_rol` tinyint(2) NOT NULL,
+  `nombre` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+  `tipo` smallint(4) NOT NULL,
+  PRIMARY KEY (`tipo`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `roles`
+--
+
+INSERT INTO `roles` (`id_rol`, `nombre`, `tipo`) VALUES
+(1, 'SUPERUSER', 1),
+(2, 'CLIENTE', 100);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tipoconsulta`
+--
+
+DROP TABLE IF EXISTS `tipoconsulta`;
+CREATE TABLE IF NOT EXISTS `tipoconsulta` (
+  `tipo_con` int(3) NOT NULL,
+  `nombre_con` varchar(30) NOT NULL,
+  PRIMARY KEY (`tipo_con`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tipoconsulta`
+--
+
+INSERT INTO `tipoconsulta` (`tipo_con`, `nombre_con`) VALUES
+(1, 'ASESORAMIENTO COMPRA'),
+(2, 'REPARACION ORDENADORES'),
+(3, 'DESARROLLO APP ANDROID'),
+(4, 'DESARROLLO WEB'),
+(5, 'INSTRUCCIONES USO DISPOSITIVO');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `clientes`
+--
+
+DROP TABLE IF EXISTS `clientes`;
+CREATE TABLE IF NOT EXISTS `clientes` (
+  `client_no` smallint(4) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `apellidos` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `contrasena` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `telefono` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+  `tipo_rol` smallint(4) NOT NULL,
+  `fecha_alt` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `hash` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `active` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`client_no`),
+  UNIQUE KEY `client_no` (`client_no`),
+  KEY `tipo_rol` (`tipo_rol`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=47 ;
+
+--
+-- RELATIONS FOR TABLE `clientes`:
+--   `tipo_rol`
+--       `roles` -> `tipo`
+--
+
+--
+-- Dumping data for table `clientes`
+--
+
+INSERT INTO `clientes` (`client_no`, `nombre`, `apellidos`, `email`, `contrasena`, `telefono`, `tipo_rol`, `fecha_alt`, `hash`, `active`) VALUES
+(36, 'Cliente', 'client', 'cliente@gmail.com', 'd94019fd760a71edf11844bb5c601a4de95aacaf', '949212417', 100, '2013-06-12 09:21:35', '', 1),
+(37, 'Administra', 'Admin', 'admin@gmail.com', 'd033e22ae348aeb5660fc2140aec35850c4da997', '949212417', 1, '2013-06-12 09:21:35', '', 1),
+(38, 'cliente1', 'cliente2', 'cliente1@gmail.com', 'd94019fd760a71edf11844bb5c601a4de95aacaf', '652656789', 100, '2013-06-12 09:21:35', '', 0),
+(39, 'Eduardo', 'Gonzalez', 'egonzalez.at@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', '949212417', 1, '2013-06-12 09:21:35', '87d538ef1c1db71603e60f278446c86470162380', 1),
+(40, 'Hola ', 'Pepe', 'esteeselcorreodeedu@hotmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', '949212417', 100, '2013-06-12 09:21:35', 'fcd72fa5e79091747b312d4bdf3a5368d2be87b3', 1),
+(41, 'mu', 'sobrino', 'mmsobrino75@gmail.com', '43a6ed7ac66deb03bc31a77d56477187d8da2c18', '679131896', 100, '2013-06-12 09:21:35', '2a7541babb57434e5631ffa2b5639e24f8ce84fc', 1),
+(42, 'Vicente', 'Gonz', 'bronchalino@hotmail.com', 'e53de75fdbcdf0c7daa1ccc6a35c563045b00f93', '696752718', 100, '2013-06-12 09:21:35', 'cf94db48fb7aa4da74260da3f6c7e4722e913b72', 1),
+(43, 'Alberto', 'Gil', 'Albermk87@hotmail.com', '4fab0cfe11734eda01358250b123345fc7e6003d', '', 100, '2013-06-12 09:21:35', '00a6915f2bd395a55fb85aed647039e4136e35cb', 1),
+(44, 'patricia', 'gonzalez ', 'patriciagm2001@hotmail.com', '04e6f3bca0d940b47b477d89cc9d3e92d03f22dd', '', 100, '2013-06-12 09:21:35', '1d57ccdb172aa69de437d5a52d2029e4f6250db2', 1),
+(45, 'DAVID', 'MORA FOGUE', 'dafomo@hotmail.com', 'c64919ecd5ba516827eba24c31359875e77d04f2', '629529513', 100, '2013-06-12 09:21:35', 'b3bf2140cfa214f15ab2fa9fa0d4817cb7dca3ac', 0),
+(46, 'Ruben', 'Ecija', 'aelres@hotmail.com', '9af9d6b1d16aa40b0f38fc101eee2db5e31d25b8', '677780723', 100, '2013-06-12 09:21:35', 'b1b986990332a28a0a8011eb538f1ded941bb5ad', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comunicaciones`
+--
+
+DROP TABLE IF EXISTS `comunicaciones`;
+CREATE TABLE IF NOT EXISTS `comunicaciones` (
+  `comu_no` smallint(4) NOT NULL AUTO_INCREMENT,
+  `id_clientes` smallint(4) NOT NULL,
+  `tipo_con` int(3) NOT NULL,
+  `titulo` text COLLATE utf8_unicode_ci,
+  `fecha_crea` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`comu_no`),
+  KEY `id_clientes` (`id_clientes`),
+  KEY `tipo_con` (`tipo_con`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=27 ;
+
+--
+-- RELATIONS FOR TABLE `comunicaciones`:
+--   `id_clientes`
+--       `clientes` -> `client_no`
+--   `tipo_con`
+--       `tipoconsulta` -> `tipo_con`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `consulta`
+--
+
+DROP TABLE IF EXISTS `consulta`;
+CREATE TABLE IF NOT EXISTS `consulta` (
+  `id_consulta` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(30) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `telefono` varchar(13) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `tipo_con` int(3) NOT NULL,
+  `descripcion` text CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id_consulta`),
+  KEY `tipo_con` (`tipo_con`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+
+--
+-- RELATIONS FOR TABLE `consulta`:
+--   `tipo_con`
+--       `tipoconsulta` -> `tipo_con`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `seguimiento`
+--
+
+DROP TABLE IF EXISTS `seguimiento`;
+CREATE TABLE IF NOT EXISTS `seguimiento` (
+  `seg_num` int(4) NOT NULL AUTO_INCREMENT,
+  `comu_no` smallint(4) NOT NULL,
+  `who` smallint(4) NOT NULL,
+  `texto` text NOT NULL,
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`seg_num`),
+  UNIQUE KEY `seg_num` (`seg_num`),
+  KEY `comu_no` (`comu_no`),
+  KEY `who` (`who`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=28 ;
+
+--
+-- RELATIONS FOR TABLE `seguimiento`:
+--   `comu_no`
+--       `comunicaciones` -> `comu_no`
+--
+
+
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+-- Constraints for table `clientes`
+--
+ALTER TABLE `clientes`
+  ADD CONSTRAINT `clientes_ibfk_1` FOREIGN KEY (`tipo_rol`) REFERENCES `roles` (`tipo`) ON DELETE CASCADE ON UPDATE CASCADE;
+--
+-- Constraints for table `comunicaciones`
+--
+ALTER TABLE `comunicaciones`
+  ADD CONSTRAINT `comunicaciones_ibfk_1` FOREIGN KEY (`id_clientes`) REFERENCES `clientes` (`client_no`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `comunicaciones_ibfk_2` FOREIGN KEY (`tipo_con`) REFERENCES `tipoconsulta` (`tipo_con`) ON DELETE CASCADE ON UPDATE CASCADE;
+--
+-- Constraints for table `consulta`
+--
+ALTER TABLE `consulta`
+  ADD CONSTRAINT `consulta_ibfk_1` FOREIGN KEY (`tipo_con`) REFERENCES `tipoconsulta` (`tipo_con`) ON DELETE CASCADE ON UPDATE CASCADE;
+--
+-- Constraints for table `seguimiento`
+--
+ALTER TABLE `seguimiento`
+  ADD CONSTRAINT `seguimiento_ibfk_1` FOREIGN KEY (`comu_no`) REFERENCES `comunicaciones` (`comu_no`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `seguimiento_ibfk_2` FOREIGN KEY (`who`) REFERENCES `clientes` (`client_no`) ON DELETE CASCADE ON UPDATE CASCADE;
